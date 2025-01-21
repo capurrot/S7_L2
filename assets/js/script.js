@@ -24,11 +24,9 @@ deleteName.addEventListener("click", () => {
 const timer = document.querySelector("h2");
 const newP = document.createElement("p");
 newP.classList.add("text-center");
-let counter = 0;
+let counter = -1;
 if (sessionStorage.getItem("count")) {
   counter = parseInt(sessionStorage.getItem("count")) - 1;
-} else {
-  counter = -1;
 }
 addCount();
 function addCount() {
