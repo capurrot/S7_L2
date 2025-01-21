@@ -26,7 +26,7 @@ const newP = document.createElement("p");
 newP.classList.add("text-center");
 let counter = 0;
 if (sessionStorage.getItem("count")) {
-  counter = parseInt(sessionStorage.getItem("count"));
+  counter = parseInt(sessionStorage.getItem("count")) - 1;
 } else {
   counter = -1;
 }
