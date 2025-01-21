@@ -1,15 +1,11 @@
 form = document.getElementById("name-form");
 form.onsubmit = function (e) {
   e.preventDefault();
-};
-
-const saveName = document.getElementById("submit");
-saveName.addEventListener("click", () => {
   let input = document.querySelector("input").value;
   localStorage.setItem("name", input);
   const lastNameSaved = document.getElementById("lastnamesaved");
   lastNameSaved.innerText = input;
-});
+};
 
 const lastNameSaved = document.getElementById("lastnamesaved");
 lastNameSaved.innerText = localStorage.getItem("name");
